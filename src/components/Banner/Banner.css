@@ -4,12 +4,13 @@
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-/* .my-margin{
-  padding-bottom: 330px;
-} */
+.my-margin{
+  margin-top: 25vh;
+}
+
 .heading{
   font-size: 45px;
   font-weight: bold;

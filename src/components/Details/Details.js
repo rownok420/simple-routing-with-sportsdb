@@ -27,7 +27,7 @@ const Details = () => {
       <MenuBar></MenuBar>
       <div className="details">
         <div className="male-female-img p-5">
-          {details.strGender == "Male" ? (
+          {details.strGender === "Male" ? (
             <img className="w-50" src={male} alt="" />
           ) : (
             <img className="w-50" src={female} alt="" />

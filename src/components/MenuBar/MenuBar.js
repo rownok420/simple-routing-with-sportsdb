@@ -11,7 +11,7 @@ const MenuBar = () => {
         textDecoration: "underline",
     };
     return (
-        <Navbar bg="transparent" variant="dark" expand="lg">
+        <Navbar className='' bg="transparent" variant="dark" expand="lg">
             <Container className='mt-4'>
                 <Navbar.Brand className="fs-3" href="/home">
                     <img className="logo" src={logo} alt="" />
