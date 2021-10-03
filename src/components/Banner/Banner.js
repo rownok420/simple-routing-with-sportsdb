@@ -1,28 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MenuBar from "../MenuBar/MenuBar";
 import "./Banner.css";
 
 const Banner = () => {
-  return (
-    <div className="banner-container ">
-      <div className="">
-        <div className="row d-flex banner align-items-center justify-content-center">
-          <MenuBar></MenuBar>
-          <div className="col-md-6">
-            <h1 className="title">
-              BE THE BASKETBALL <br /> STAR AND SHINE
-            </h1>
-            <p className="text-white text-center mt-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
-            <button className="mt-3 about-btn">About Us</button>
-          </div>
-          <div className="col-md-6"></div>
+    return (
+        <div className="bg-img">
+            <MenuBar />
+            <div className="d-flex flex-column justify-content-center align-items-center h-100 my-margin">
+                <h1 className="heading">BE THE BASKETBALL STAR AND SHINE</h1>
+                <p className="text-white text-center mt-3">
+                    Join one of our weekly group runs and workouts. Regular
+                    early training boosts your daily energy, strengthens your
+                    muscles, spirit, and brains...
+                </p>
+                <Link to="/club">
+                    <button className="home-button">See all Club</button>
+                </Link>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Banner;

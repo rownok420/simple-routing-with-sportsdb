@@ -1,43 +1,46 @@
-import React, { useContext } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import "./MenuBar.css";
 import logo from "../..//images/logo/baller-logo-3.png";
-import { Link } from "react-router-dom";
-import { userContext } from "./../../App";
 
 const MenuBar = () => {
-  const [user, setUser] = useContext(userContext);
-  console.log(user);
-  return (
-    <div className="MenuBar-container">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-2">
-            <div className="logo-img">
-              <img className="w-75" src={logo} alt="" />
-            </div>
-          </div>
-          <div className="col-md-10">
-            <div className="menu-container ">
-              <ul className="d-flex align-items-end justify-content-end">
-                <Link to="/home" className="items">
-                  <li>Home</li>
-                </Link>
-                <Link to="/sports" className="items">
-                  <li>Sports</li>
-                </Link>
-                <Link to="/about" className="items">
-                  <li>About us</li>
-                </Link>
-                <Link to="contact" className="items">
-                  <li>Contact us</li>
-                </Link>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    const activeStyle = {
+        fontWeight: "bold",
+        color: "yellow",
+        textDecoration: "underline",
+    };
+    return (
+        <Navbar bg="transparent" variant="dark" expand="lg">
+            <Container className='mt-4'>
+                <Navbar.Brand className="fs-3" href="/home">
+                    <img className="logo" src={logo} alt="" />
+                </Navbar.Brand>
+
+                <Navbar.Toggle aria-controls="navbarScroll" />
+
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav className="ms-auto my-2 my-lg-0" navbarScroll>
+                        <NavLink activeStyle={activeStyle} to="/home">
+                            Home
+                        </NavLink>
+                        <NavLink activeStyle={activeStyle} to="/club">
+                            Club
+                        </NavLink>
+                        <NavLink activeStyle={activeStyle} to="/coaches">
+                            Coaches
+                        </NavLink>
+                        <NavLink activeStyle={activeStyle} to="/about">
+                            About us
+                        </NavLink>
+                        <NavLink activeStyle={activeStyle} to="/contact">
+                            Contact us
+                        </NavLink>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
 };
 
 export default MenuBar;

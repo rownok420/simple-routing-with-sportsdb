@@ -1,13 +1,18 @@
-.items {
-  list-style: none;
-  margin-right: 30px;
-  font-size: 22px;
-  font-weight: 500;
-  color: rgb(218, 214, 214);
-  cursor: pointer;
-  padding: 5px;
+nav a {
+  color: white;
   text-decoration: none;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
-.items:hover {
-  color: rgb(221, 5, 5);
+
+nav a:hover,
+nav a:active {
+  font-weight: bold;
+  color: yellow;
+  text-decoration: underline;
+}
+
+.logo{
+  height: 50px;
 }
